@@ -27,7 +27,7 @@
         "orchestra/testbench": "^7.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
-        "pestphp/pest-plugin-mock": "^1.0",
+        "pestphp/pest-plugin-mock": "^1.0.3",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
@@ -36,8 +36,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Knutle\\MockRecorder\\": "src",
-            "Knutle\\MockRecorder\\Database\\Factories\\": "database/factories"
+            "Knutle\\MockRecorder\\": "src"
         },
         "files": [
             "bootstrap/helpers.php"
