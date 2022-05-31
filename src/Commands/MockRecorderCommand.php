@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Knutle\MockRecorder\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class MockRecorderCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'pest-mock-recorder';
 
     public $description = 'My command';
 
