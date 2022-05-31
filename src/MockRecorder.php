@@ -2,7 +2,6 @@
 
 namespace Knutle\MockRecorder;
 
-use Closure;
 use Pest\Mock\Mock;
 
 /**
@@ -36,7 +35,7 @@ class MockRecorder
                 return function () use ($handler) {
                     $output = $handler(...func_get_args());
 
-                    if(is_scalar($output)) {
+                    if (is_scalar($output)) {
                         $record = $output;
                         $return = null;
                     } else {

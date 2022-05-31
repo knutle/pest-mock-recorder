@@ -18,7 +18,7 @@ it('can record from and return data for mocked function with return type hint', 
 
     expect($mock->history)->toEqual([
         'Bob',
-        'Jim'
+        'Jim',
     ]);
 });
 
@@ -44,6 +44,6 @@ it('can skip return data for mocked function without return type hint', function
 
     expect($mock->history)->toEqual([
         'Bob',
-        'Jim'
+        'Jim',
     ]);
 });
