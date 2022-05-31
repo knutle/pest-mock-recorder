@@ -1,6 +1,6 @@
 {
     "name": "knutle/pest-mock-recorder",
-    "description": "Lets you easily bind a mock to the service container that can flexibly record invocations it receives",
+    "description": "Lets you easily bind a mock to the service container that can flexibly record history every time it is used",
     "keywords": [
         "knutle",
         "laravel",
@@ -27,6 +27,7 @@
         "orchestra/testbench": "^7.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
+        "pestphp/pest-plugin-mock": "^1.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
@@ -37,7 +38,10 @@
         "psr-4": {
             "Knutle\\MockRecorder\\": "src",
             "Knutle\\MockRecorder\\Database\\Factories\\": "database/factories"
-        }
+        },
+        "files": [
+            "bootstrap/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
