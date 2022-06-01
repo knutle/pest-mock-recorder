@@ -1,4 +1,6 @@
-<?php /** @noinspection PhpUnhandledExceptionInspection */
+<?php
+
+/** @noinspection PhpUnhandledExceptionInspection */
 
 use Knutle\MockRecorder\MockRecorder;
 use Knutle\MockRecorder\Tests\Fakes\GreetingGenerator;
