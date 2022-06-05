@@ -2,6 +2,11 @@
 
 All notable changes to `pest-mock-recorder` will be documented in this file.
 
+## v0.1.2 - 2022-06-05
+
+- add convenience method to mock without binding to container
+- allow access to underlying mock
+
 ## v0.1.1 - 2022-06-01
 
 - lower required PHP version to ^8.0
