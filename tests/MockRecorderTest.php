@@ -76,3 +76,15 @@ it('can throw helpful exception when mocked method requires unsupported return t
 
     app(GreetingGenerator::class)->complain('test');
 })->throws("Failed to create empty return value of type 'Exception' for mocked method 'complain' on 'Knutle\MockRecorder\Tests\Fakes\GreetingGenerator'. Please provide a return value during your mock setup.");
+
+it('can get instance of underlying mock', function () {
+    $mock = MockRecorder::mock(GreetingGenerator::class);
+
+    $mock->shouldReceive('write')->andReturn('result');
+
+    expect($mock->getMock())
+        ->toBeInstanceOf(GreetingGenerator::class)
+        ->and($mock)
+        ->not()
+        ->toBeInstanceOf(GreetingGenerator::class);
+});

@@ -3,6 +3,7 @@
 namespace Knutle\MockRecorder;
 
 use Exception;
+use Mockery\LegacyMockInterface;
 use Mockery\MockInterface;
 use Pest\Mock\Mock;
 use ReflectionClass;
@@ -25,6 +26,11 @@ class MockRecorder
     {
         $this->mock = $mock;
         $this->reflectionClass = $reflectionClass;
+    }
+
+    public function getMock(): LegacyMockInterface
+    {
+        return $this->byDefault();
     }
 
     /**
@@ -98,5 +104,13 @@ class MockRecorder
     public static function bind(string $abstract): MockRecorder
     {
         return new MockRecorder(bind_mock($abstract), new ReflectionClass($abstract));
+    }
+
+    /**
+     * @throws ReflectionException
+     */
+    public static function mock(string $abstract): MockRecorder
+    {
+        return new MockRecorder(mock($abstract), new ReflectionClass($abstract));
     }
 }
